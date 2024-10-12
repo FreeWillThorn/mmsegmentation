@@ -11,7 +11,7 @@ data_preprocessor = dict(
     size_divisor=640,
     test_cfg=dict(size_divisor=32))
 
-num_classes = 171
+num_classes = 2
 model = dict(
     type='MultimodalEncoderDecoder',
     data_preprocessor=data_preprocessor,
@@ -20,7 +20,7 @@ model = dict(
     encoder_resolution=0.5,
     image_encoder=dict(
         type='VisionTransformer',
-        img_size=(224, 224),
+        img_size=(640, 640),
         patch_size=16,
         patch_pad=0,
         in_channels=3,
