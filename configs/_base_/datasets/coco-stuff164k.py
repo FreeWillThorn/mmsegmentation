@@ -54,7 +54,7 @@ train_dataloader = dict(
         type=dataset_type,
         data_root=data_root,
         data_prefix=dict(
-            img_path='images/train', seg_map_path='annotations/train_annotations.coco'),
+            img_path='images/train', seg_map_path='annotations/train_annotations.coco.json'),
         pipeline=train_pipeline))
 val_dataloader = dict(
     batch_size=1,
