@@ -1,6 +1,6 @@
 # dataset settings
 dataset_type = 'COCOStuffDataset'
-data_root = 'data/TumorSeg_brain'
+data_root = 'mmsegmentation/data/TumorSeg_brain'
 #crop_size = (512, 512)
 crop_size = (640, 640)
 train_pipeline = [
