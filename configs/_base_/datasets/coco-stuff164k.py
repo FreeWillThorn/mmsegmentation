@@ -54,7 +54,7 @@ train_dataloader = dict(
         type=dataset_type,
         data_root=data_root,
         data_prefix=dict(
-            img_path='images/train', seg_map_path='/Users/wangyixun/Programming/mmsegmentation/data/TumorSeg_brain/annotations/train/masks',
+            img_path='images/train', seg_map_path='/Users/wangyixun/Programming/mmsegmentation/data/TumorSeg_brain/annotations/train_masks',
             ann_file='annotations/train_annotations.coco.json'
         ),
         pipeline=train_pipeline))
