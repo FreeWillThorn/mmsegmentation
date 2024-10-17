@@ -119,7 +119,9 @@ model = dict(
         loss_decode=[dict(type='CrossEntropyLoss',
                           loss_name='loss_cls_ce',
                           loss_weight=2.0,
-                          class_weight=[1.0] * num_classes + [0.1]),
+                          #class_weight=[1.0] * num_classes + [0.1]),
+                            class_weight=[1.0, 1.0]# Use only 2 values for 2 classes
+                          ),
                      dict(type='CrossEntropyLoss',
                           use_sigmoid=True,
                           loss_name='loss_mask_ce',
