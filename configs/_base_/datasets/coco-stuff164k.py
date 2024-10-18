@@ -55,7 +55,7 @@ train_dataloader = dict(
         data_root=data_root,
         data_prefix=dict(
             img_path='images/train', seg_map_path='annotations/train_masks',
-            ann_file='annotations/train_annotations.coco.json'
+
         ),
         pipeline=train_pipeline))
 val_dataloader = dict(
@@ -67,7 +67,7 @@ val_dataloader = dict(
         type=dataset_type,
         data_root=data_root,
         data_prefix=dict(
-            img_path='images/valid', seg_map_path='annotations/valid_annotations.coco'),
+            img_path='images/valid', seg_map_path='annotations/valid_mask'),
         pipeline=test_pipeline))
 #test_dataloader = val_dataloader
 #since i have do have test set
@@ -80,7 +80,7 @@ test_dataloader = dict(
         type=dataset_type,
         data_root=data_root,
         data_prefix=dict(
-            img_path='images/test', seg_map_path='annotations/test_annotations.coco'),
+            img_path='images/test', seg_map_path='annotations/test_mask'),
         pipeline=test_pipeline))
 
 val_evaluator = dict(type='IoUMetric', iou_metrics=['mIoU'])
