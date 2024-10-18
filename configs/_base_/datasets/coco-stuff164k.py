@@ -67,7 +67,7 @@ val_dataloader = dict(
         type=dataset_type,
         data_root=data_root,
         data_prefix=dict(
-            img_path='images/valid', seg_map_path='annotations/valid_mask'),
+            img_path='images/valid', seg_map_path='annotations/valid_masks'),
         pipeline=test_pipeline))
 #test_dataloader = val_dataloader
 #since i have do have test set
@@ -80,7 +80,7 @@ test_dataloader = dict(
         type=dataset_type,
         data_root=data_root,
         data_prefix=dict(
-            img_path='images/test', seg_map_path='annotations/test_mask'),
+            img_path='images/test', seg_map_path='annotations/test_masks'),
         pipeline=test_pipeline))
 
 val_evaluator = dict(type='IoUMetric', iou_metrics=['mIoU'])
