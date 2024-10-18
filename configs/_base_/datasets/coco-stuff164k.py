@@ -46,7 +46,7 @@ tta_pipeline = [
         ])
 ]
 train_dataloader = dict(
-    batch_size=4,
+    batch_size=2,
     num_workers=4,
     persistent_workers=True,
     sampler=dict(type='InfiniteSampler', shuffle=True),
@@ -55,7 +55,7 @@ train_dataloader = dict(
         data_root=data_root,
         data_prefix=dict(
             img_path='images/train', seg_map_path='annotations/train_masks',
-
+            ann_file='annotations/train_annotations.coco.json'
         ),
         pipeline=train_pipeline))
 val_dataloader = dict(
