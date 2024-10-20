@@ -69,7 +69,7 @@ def pcontext_classes():
 def cocostuff_classes():
     """Pascal Context class names for external use."""
     return [
-        'non-tumor', 'tumor'
+        'background', 'tumor'
     ]
 
 

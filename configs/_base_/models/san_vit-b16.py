@@ -1,6 +1,5 @@
 # model settings
-#norm_cfg = dict(type='SyncBN', requires_grad=True)
-norm_cfg = dict(type='SyncBN', requires_grad=True)
+norm_cfg = dict(type='BN', requires_grad=True)
 data_preprocessor = dict(
     type='SegDataPreProcessor',
     mean=[122.7709, 116.7460, 104.0937],

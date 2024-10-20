@@ -1,6 +1,6 @@
 # dataset settings
 dataset_type = 'COCOStuffDataset'
-data_root = '/content/mmsegmentation/data/TumorSeg_brain'
+data_root = '/mmsegmentation/data/TumorSeg_brain'
 #crop_size = (512, 512)
 crop_size = (640, 640)
 train_pipeline = [
@@ -47,7 +47,7 @@ tta_pipeline = [
 ]
 train_dataloader = dict(
     batch_size=8,
-    num_workers=4,
+    num_workers=2,
     persistent_workers=True,
     sampler=dict(type='InfiniteSampler', shuffle=True),
     dataset=dict(
@@ -60,7 +60,7 @@ train_dataloader = dict(
         pipeline=train_pipeline))
 val_dataloader = dict(
     batch_size=1,
-    num_workers=4,
+    num_workers=2,
     persistent_workers=True,
     sampler=dict(type='DefaultSampler', shuffle=False),
     dataset=dict(
@@ -73,7 +73,7 @@ val_dataloader = dict(
 #since i have do have test set
 test_dataloader = dict(
     batch_size=1,
-    num_workers=4,
+    num_workers=2,
     persistent_workers=True,
     sampler=dict(type='DefaultSampler', shuffle=False),
     dataset=dict(
